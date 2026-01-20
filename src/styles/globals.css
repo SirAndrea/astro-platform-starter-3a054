@@ -1,19 +1,22 @@
 @import 'tailwindcss';
 
 @theme {
-    --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-    --color-primary: #f67280;
-    --color-primary-content: #101828;
-    --color-complementary: #355c7d;
-    --background-image-noise: linear-gradient(
-            to bottom,
-            color-mix(in oklab, var(--color-gray-950) 0%, transparent),
-            color-mix(in oklab, var(--color-gray-950) 100%, transparent)
-        ),
-        url('/images/noise.png');
+    --font-sans: 'Poppins', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --color-primary: #e91e63;
+    --color-primary-dark: #c2185b;
+    --color-text-dark: #1a1a1a;
+    --color-text-gray: #666666;
 }
 
 @layer base {
+    html, body {
+        cursor: url('/images/custom-cursor.png'), auto;
+    }
+
+    a, button, [role="button"], input[type="submit"], input[type="button"] {
+        cursor: url('/images/custom-cursor.png'), pointer;
+    }
+
     h1 {
         @apply text-4xl font-bold tracking-tight sm:text-5xl;
     }
@@ -22,57 +25,83 @@
         @apply text-2xl font-bold sm:text-3xl;
     }
 
-    a:not(.btn) {
-        @apply underline transition hover:opacity-80;
+    h3 {
+        @apply text-xl font-semibold sm:text-2xl;
     }
 
-    pre {
-        @apply p-6 overflow-x-auto rounded-lg;
-    }
-
-    :not(pre) > code {
-        @apply px-1 py-0.5 font-mono rounded bg-gray-900 text-primary;
-        font-size: 0.9em;
+    a:not(.btn):not(.nav-link):not(.nav-link-sub) {
+        @apply text-primary hover:text-primary-dark transition-colors;
     }
 }
 
 @layer components {
-    .markdown {
-        > * {
-            @apply my-6;
-        }
-
-        :where(h1, h2) {
-            @apply mt-12 mb-6;
-        }
-
-        > :first-child {
-            @apply mt-0;
-        }
-
-        > :last-child {
-            @apply mb-0;
-        }
-    }
-
     .btn {
-        @apply inline-flex items-center justify-center gap-2 bg-primary text-primary-content cursor-pointer text-center font-semibold no-underline transition-colors;
-        padding: var(--btn-py, 0.875rem) var(--btn-px, 1.25rem);
-        font-size: var(--btn-font-size, 0.875rem);
-        border-radius: var(--btn-border-radius, 0.25rem);
+        @apply inline-flex items-center justify-center gap-2 bg-primary text-white text-center font-semibold no-underline transition-colors rounded-lg px-6 py-3;
 
         &:hover {
-            @apply bg-primary/85;
-        }
-
-        &:disabled {
-            @apply text-gray-400 bg-gray-700;
+            @apply bg-primary-dark;
         }
     }
 
-    .btn-lg {
-        --btn-font-size: 1.125rem;
-        --btn-px: 1.5rem;
-        --btn-py: 1.125rem;
+    .hamburger-menu {
+        @apply fixed top-0 left-0 h-full w-64 bg-white shadow-2xl transform -translate-x-full transition-transform duration-300 ease-in-out z-50 overflow-y-auto;
+    }
+
+    .hamburger-menu.open {
+        @apply translate-x-0;
+    }
+
+    .overlay {
+        @apply fixed inset-0 bg-black/50 opacity-0 pointer-events-none transition-opacity duration-300 z-40;
+    }
+
+    .overlay.open {
+        @apply opacity-100 pointer-events-auto;
+    }
+
+    .nav-link {
+        @apply block px-6 py-4 text-lg text-text-dark hover:bg-gray-100 transition-colors border-b border-gray-100;
+    }
+
+    .nav-link-sub {
+        @apply block py-2 text-sm text-gray-600 hover:text-primary transition-colors;
+    }
+
+    /* Animated gradient background */
+    .animated-bg {
+        background: linear-gradient(135deg, #ffffff 0%, #f3e8ff 30%, #e9d5ff 50%, #a855f7 80%, #7c3aed 100%);
+        background-size: 400% 400%;
+        animation: gradientShift 15s ease infinite;
+        position: relative;
+        min-height: 100vh;
+    }
+
+    @keyframes gradientShift {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    /* Particle canvas container */
+    #particles-canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    /* Ensure content is above particles */
+    main, footer, .hamburger-menu, #hamburger-btn {
+        position: relative;
+        z-index: 10;
+    }
+
+    /* Fluorescent green accents */
+    .fluor-accent {
+        color: #39ff14;
+        text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14;
     }
 }

@@ -1,19 +1,70 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Markdown from '../components/Markdown.astro';
-
-const explainer = `
-An Astro website can go way beyond static pages - on the right platform.
-
-Netlify supports not only [Streaming SSR](https://docs.astro.build/en/guides/server-side-rendering/#html-streaming) and fast [Edge Middleware](https://docs.astro.build/en/guides/middleware/), but also [on-demand revalidation](https://www.netlify.com/blog/cache-tags-and-purge-api-on-netlify/) and [stale-while-revalidate](https://www.netlify.com/blog/swr-and-fine-grained-cache-control/). 
-Any page or data can be rebuilt only when needed, without site visitors ever getting a performance hit.
-`;
 ---
 
-<Layout title="Welcome to Astro.">
-    <h1 class="mb-10">Netlify Platform Starter for Astro</h1>
-    <Markdown content={explainer} class="mb-10 text-lg" />
-    <p>
-        <a href="https://docs.netlify.com/frameworks/astro/" class="btn btn-lg sm:min-w-64">Read the Docs</a>
-    </p>
+<Layout title="Inicio">
+    <div class="min-h-screen flex flex-col">
+        <!-- Hero Section with centered title -->
+        <section class="flex-1 flex items-center justify-center py-20 px-6">
+            <div class="text-center max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-7xl font-bold text-gray-900 mb-8">
+                    Rubius es el mejor
+                </h1>
+                <div class="w-24 h-1 bg-pink-500 mx-auto mb-12"></div>
+            </div>
+        </section>
+
+        <!-- Description Section -->
+        <section class="py-16 px-6 bg-gray-50">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">¿Quien es El Rubius?</h2>
+                <div class="prose prose-lg mx-auto text-gray-700 space-y-6">
+                    <p class="text-lg leading-relaxed">
+                        <strong>Ruben Doblas Gundersen</strong>, mejor conocido como <strong>El Rubius</strong> o <strong>elrubiusOMG</strong>,
+                        es uno de los creadores de contenido mas influyentes de habla hispana. Nacido el 13 de febrero de 1990 en Mijas, Malaga,
+                        este youtuber y streamer espanol-noruego ha conquistado los corazones de millones de fans alrededor del mundo.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        Su carrera comenzo en YouTube en 2006, pero fue con su canal principal <strong>"elrubiusOMG"</strong> creado en 2011
+                        donde alcanzo la fama mundial. Con su contenido de videojuegos, vlogs y su inconfundible sentido del humor,
+                        El Rubius se convirtio rapidamente en uno de los youtubers mas seguidos del mundo.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        A lo largo de su carrera, ha acumulado mas de <strong>40 millones de suscriptores</strong> en YouTube y millones
+                        de seguidores en Twitch, donde realiza streams regularmente. Su impacto en la cultura digital hispanohablante
+                        es innegable, habiendo sido pionero en muchas tendencias del entretenimiento online.
+                    </p>
+                    <p class="text-lg leading-relaxed">
+                        Ademas de su carrera como creador de contenido, El Rubius ha expandido su marca con su tienda <strong>Madkat</strong>,
+                        ha publicado libros que se han convertido en bestsellers, y ha participado en numerosos eventos y colaboraciones
+                        con otros creadores de todo el mundo.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Links Section -->
+        <section class="py-16 px-6">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Explora mas</h2>
+                <div class="grid md:grid-cols-3 gap-6">
+                    <a href="/historia" class="block p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100 no-underline">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Historia</h3>
+                        <p class="text-gray-600">Conoce la trayectoria completa de El Rubius desde sus inicios.</p>
+                    </a>
+                    <a href="/libros" class="block p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100 no-underline">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Sus Libros</h3>
+                        <p class="text-gray-600">Descubre las obras literarias de El Rubius.</p>
+                    </a>
+                    <a href="https://www.madkat.store/en/" target="_blank" rel="noopener noreferrer" class="block p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100 no-underline">
+                        <div class="flex items-center gap-2 mb-2">
+                            <img src="/images/madkat-icon.png" alt="Madkat" class="w-6 h-6 object-contain" />
+                            <h3 class="text-xl font-semibold text-gray-900">Madkat Store</h3>
+                        </div>
+                        <p class="text-gray-600">Visita la tienda oficial de El Rubius.</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
 </Layout>
