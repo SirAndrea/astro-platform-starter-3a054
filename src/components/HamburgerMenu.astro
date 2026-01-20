@@ -1,0 +1,140 @@
+---
+---
+
+<!-- Hamburger Button -->
+<button
+    id="hamburger-btn"
+    class="fixed top-4 left-4 z-50 p-2 rounded-lg bg-white shadow-lg hover:bg-gray-100 transition-colors"
+    aria-label="Abrir menu"
+    aria-expanded="false"
+>
+    <svg id="hamburger-icon" class="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+    </svg>
+    <svg id="close-icon" class="w-6 h-6 text-gray-700 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+    </svg>
+</button>
+
+<!-- Overlay -->
+<div id="menu-overlay" class="overlay"></div>
+
+<!-- Side Menu -->
+<nav id="side-menu" class="hamburger-menu" aria-label="Menu principal">
+    <div class="pt-20 pb-6">
+        <div class="px-6 pb-4 border-b border-gray-200">
+            <h2 class="text-xl font-bold text-gray-900">Menu</h2>
+        </div>
+        <ul class="mt-4">
+            <li>
+                <a href="/" class="nav-link">Inicio</a>
+            </li>
+            <li>
+                <a href="/historia" class="nav-link">Historia</a>
+            </li>
+            <li>
+                <a href="/libros" class="nav-link">Sus Libros y Comics</a>
+            </li>
+            <li>
+                <a href="https://www.madkat.store/en/" class="nav-link madkat-link" target="_blank" rel="noopener noreferrer">
+                    <img src="/images/madkat-icon.png" alt="Madkat" class="inline-block w-5 h-5 mr-2 object-contain" />
+                    Madkat Store
+                    <svg class="inline-block w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+
+        <!-- Twitch Section -->
+        <div class="px-6 py-4 border-t border-gray-200 mt-4">
+            <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-3">Streaming</h3>
+            <ul class="space-y-1">
+                <li>
+                    <a href="https://www.twitch.tv/rubius" class="nav-link-sub twitch-link" target="_blank" rel="noopener noreferrer">
+                        <svg class="inline-block w-4 h-4 mr-2" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714Z"/>
+                        </svg>
+                        Canal de Twitch
+                        <svg class="inline-block w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- YouTube Channels Section -->
+        <div class="px-6 py-4 border-t border-gray-200">
+            <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-3">Canales de YouTube</h3>
+            <ul class="space-y-1">
+                <li>
+                    <a href="https://www.youtube.com/@elrubius" class="nav-link-sub youtube-link" target="_blank" rel="noopener noreferrer">
+                        <img src="/images/rubiusz-icon.jpg" alt="elrubiusZ" class="inline-block w-5 h-5 mr-2 rounded-full object-cover" />
+                        elrubiusZ
+                        <svg class="inline-block w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.youtube.com/@elrubiusOMG" class="nav-link-sub youtube-link" target="_blank" rel="noopener noreferrer">
+                        <img src="/images/rubiusomg-icon.jpg" alt="elrubiusOMG" class="inline-block w-5 h-5 mr-2 rounded-full object-cover" />
+                        elrubiusOMG
+                        <svg class="inline-block w-3 h-3 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+                        </svg>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Fortnite Avatar Section -->
+        <div class="px-6 py-4 border-t border-gray-200">
+            <h3 class="text-sm font-bold text-gray-500 uppercase tracking-wider mb-3">Avatar de Fortnite</h3>
+            <a href="https://www.youtube.com/watch?v=vPAKpEFQ2p0" class="block rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow" target="_blank" rel="noopener noreferrer">
+                <img src="/images/fortnite-avatar.jpg" alt="Avatar de Fortnite de El Rubius" class="w-full h-auto" />
+                <div class="p-3 bg-gradient-to-r from-purple-600 to-pink-500">
+                    <p class="text-white text-sm font-medium">Como surgio el avatar de Fortnite</p>
+                    <p class="text-white/80 text-xs">Ver video</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</nav>
+
+<script>
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const sideMenu = document.getElementById('side-menu');
+    const overlay = document.getElementById('menu-overlay');
+    const hamburgerIcon = document.getElementById('hamburger-icon');
+    const closeIcon = document.getElementById('close-icon');
+
+    function toggleMenu() {
+        const isOpen = sideMenu?.classList.contains('open');
+
+        if (isOpen) {
+            sideMenu?.classList.remove('open');
+            overlay?.classList.remove('open');
+            hamburgerIcon?.classList.remove('hidden');
+            closeIcon?.classList.add('hidden');
+            hamburgerBtn?.setAttribute('aria-expanded', 'false');
+        } else {
+            sideMenu?.classList.add('open');
+            overlay?.classList.add('open');
+            hamburgerIcon?.classList.add('hidden');
+            closeIcon?.classList.remove('hidden');
+            hamburgerBtn?.setAttribute('aria-expanded', 'true');
+        }
+    }
+
+    hamburgerBtn?.addEventListener('click', toggleMenu);
+    overlay?.addEventListener('click', toggleMenu);
+
+    // Close menu on escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && sideMenu?.classList.contains('open')) {
+            toggleMenu();
+        }
+    });
+</script>
