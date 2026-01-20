@@ -6,11 +6,16 @@
     --color-primary-dark: #c2185b;
     --color-text-dark: #1a1a1a;
     --color-text-gray: #666666;
+    --color-violet-bg: #5b21b6;
 }
 
 @layer base {
     html, body {
         cursor: url('/images/custom-cursor.png'), auto;
+    }
+
+    body {
+        background-color: var(--color-violet-bg);
     }
 
     a, button, [role="button"], input[type="submit"], input[type="button"] {
@@ -67,41 +72,28 @@
         @apply block py-2 text-sm text-gray-600 hover:text-primary transition-colors;
     }
 
-    /* Animated gradient background */
-    .animated-bg {
-        background: linear-gradient(135deg, #ffffff 0%, #f3e8ff 30%, #e9d5ff 50%, #a855f7 80%, #7c3aed 100%);
-        background-size: 400% 400%;
-        animation: gradientShift 15s ease infinite;
-        position: relative;
-        min-height: 100vh;
+    /* Body scroll lock when menu is open */
+    body.menu-open {
+        overflow: hidden;
     }
 
-    @keyframes gradientShift {
-        0% { background-position: 0% 50%; }
-        50% { background-position: 100% 50%; }
-        100% { background-position: 0% 50%; }
-    }
-
-    /* Particle canvas container */
-    #particles-canvas {
+    /* Particle canvas */
+    #particle-canvas {
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
+        z-index: 0;
         pointer-events: none;
-        z-index: 1;
     }
 
-    /* Ensure content is above particles */
-    main, footer, .hamburger-menu, #hamburger-btn {
-        position: relative;
-        z-index: 10;
+    /* Instagram link gradient style */
+    .instagram-link {
+        background: linear-gradient(45deg, rgba(131, 58, 180, 0.1), rgba(253, 29, 29, 0.1), rgba(252, 176, 69, 0.1));
     }
 
-    /* Fluorescent green accents */
-    .fluor-accent {
-        color: #39ff14;
-        text-shadow: 0 0 10px #39ff14, 0 0 20px #39ff14, 0 0 30px #39ff14;
+    .instagram-link:hover {
+        background: linear-gradient(45deg, rgba(131, 58, 180, 0.2), rgba(253, 29, 29, 0.2), rgba(252, 176, 69, 0.2));
     }
 }

@@ -4,38 +4,40 @@ import Layout from '../layouts/Layout.astro';
 
 <Layout title="Inicio">
     <div class="min-h-screen flex flex-col">
-        <!-- Hero Section with centered title -->
-        <section class="flex-1 flex items-center justify-center py-20 px-6">
-            <div class="text-center max-w-4xl mx-auto">
-                <h1 class="text-5xl md:text-7xl font-bold text-gray-900 mb-8">
+        <!-- Hero Section with banner and centered title -->
+        <section class="hero-banner flex-1 flex items-center justify-center py-20 px-6 relative overflow-hidden">
+            <!-- Banner image with fade effect -->
+            <div class="banner-image"></div>
+            <div class="text-center max-w-4xl mx-auto relative z-10">
+                <h1 class="text-5xl md:text-7xl font-bold text-white mb-8">
                     Rubius es el mejor
                 </h1>
-                <div class="w-24 h-1 bg-pink-500 mx-auto mb-12"></div>
+                <div class="w-24 h-1 bg-green-400 mx-auto mb-12"></div>
             </div>
         </section>
 
         <!-- Description Section -->
-        <section class="py-16 px-6 bg-gray-50">
+        <section class="py-16 px-6 bg-purple-900/50 backdrop-blur-sm">
             <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl font-bold text-gray-900 mb-8 text-center">¿Quien es El Rubius?</h2>
-                <div class="prose prose-lg mx-auto text-gray-700 space-y-6">
+                <h2 class="text-3xl font-bold text-white mb-8 text-center">¿Quién es El Rubius?</h2>
+                <div class="prose prose-lg mx-auto text-gray-200 space-y-6">
                     <p class="text-lg leading-relaxed">
-                        <strong>Ruben Doblas Gundersen</strong>, mejor conocido como <strong>El Rubius</strong> o <strong>elrubiusOMG</strong>,
-                        es uno de los creadores de contenido mas influyentes de habla hispana. Nacido el 13 de febrero de 1990 en Mijas, Malaga,
-                        este youtuber y streamer espanol-noruego ha conquistado los corazones de millones de fans alrededor del mundo.
+                        <strong class="text-white">Rubén Doblas Gundersen</strong>, mejor conocido como <strong class="text-white">El Rubius</strong> o <strong class="text-white">elrubiusOMG</strong>,
+                        es uno de los creadores de contenido más influyentes de habla hispana. Nacido el 13 de febrero de 1990 en Mijas, Málaga,
+                        este youtuber y streamer español-noruego ha conquistado los corazones de millones de fans alrededor del mundo.
                     </p>
                     <p class="text-lg leading-relaxed">
-                        Su carrera comenzo en YouTube en 2006, pero fue con su canal principal <strong>"elrubiusOMG"</strong> creado en 2011
-                        donde alcanzo la fama mundial. Con su contenido de videojuegos, vlogs y su inconfundible sentido del humor,
-                        El Rubius se convirtio rapidamente en uno de los youtubers mas seguidos del mundo.
+                        Su carrera comenzó en YouTube en 2006, pero fue con su canal principal <strong class="text-white">"elrubiusOMG"</strong> creado en 2011
+                        donde alcanzó la fama mundial. Con su contenido de videojuegos, vlogs y su inconfundible sentido del humor,
+                        El Rubius se convirtió rápidamente en uno de los youtubers más seguidos del mundo.
                     </p>
                     <p class="text-lg leading-relaxed">
-                        A lo largo de su carrera, ha acumulado mas de <strong>40 millones de suscriptores</strong> en YouTube y millones
+                        A lo largo de su carrera, ha acumulado más de <strong class="text-white">40 millones de suscriptores</strong> en YouTube y millones
                         de seguidores en Twitch, donde realiza streams regularmente. Su impacto en la cultura digital hispanohablante
                         es innegable, habiendo sido pionero en muchas tendencias del entretenimiento online.
                     </p>
                     <p class="text-lg leading-relaxed">
-                        Ademas de su carrera como creador de contenido, El Rubius ha expandido su marca con su tienda <strong>Madkat</strong>,
+                        Además de su carrera como creador de contenido, El Rubius ha expandido su marca con su tienda <strong class="text-white">Madkat</strong>,
                         ha publicado libros que se han convertido en bestsellers, y ha participado en numerosos eventos y colaboraciones
                         con otros creadores de todo el mundo.
                     </p>
@@ -46,25 +48,45 @@ import Layout from '../layouts/Layout.astro';
         <!-- Quick Links Section -->
         <section class="py-16 px-6">
             <div class="max-w-4xl mx-auto">
-                <h2 class="text-3xl font-bold text-gray-900 mb-12 text-center">Explora mas</h2>
+                <h2 class="text-3xl font-bold text-white mb-12 text-center">Explora más</h2>
                 <div class="grid md:grid-cols-3 gap-6">
-                    <a href="/historia" class="block p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100 no-underline">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Historia</h3>
-                        <p class="text-gray-600">Conoce la trayectoria completa de El Rubius desde sus inicios.</p>
+                    <a href="/historia" class="block p-6 bg-purple-800/60 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl hover:bg-purple-700/60 transition-all border border-purple-600/30 no-underline">
+                        <h3 class="text-xl font-semibold text-white mb-2">Historia</h3>
+                        <p class="text-gray-300">Conoce la trayectoria completa de El Rubius desde sus inicios.</p>
                     </a>
-                    <a href="/libros" class="block p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100 no-underline">
-                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Sus Libros</h3>
-                        <p class="text-gray-600">Descubre las obras literarias de El Rubius.</p>
+                    <a href="/libros" class="block p-6 bg-purple-800/60 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl hover:bg-purple-700/60 transition-all border border-purple-600/30 no-underline">
+                        <h3 class="text-xl font-semibold text-white mb-2">Sus Libros</h3>
+                        <p class="text-gray-300">Descubre las obras literarias de El Rubius.</p>
                     </a>
-                    <a href="https://www.madkat.store/en/" target="_blank" rel="noopener noreferrer" class="block p-6 bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow border border-gray-100 no-underline">
+                    <a href="https://www.madkat.store/en/" target="_blank" rel="noopener noreferrer" class="block p-6 bg-purple-800/60 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl hover:bg-purple-700/60 transition-all border border-purple-600/30 no-underline">
                         <div class="flex items-center gap-2 mb-2">
                             <img src="/images/madkat-icon.png" alt="Madkat" class="w-6 h-6 object-contain" />
-                            <h3 class="text-xl font-semibold text-gray-900">Madkat Store</h3>
+                            <h3 class="text-xl font-semibold text-white">Madkat Store</h3>
                         </div>
-                        <p class="text-gray-600">Visita la tienda oficial de El Rubius.</p>
+                        <p class="text-gray-300">Visita la tienda oficial de El Rubius.</p>
                     </a>
                 </div>
             </div>
         </section>
     </div>
 </Layout>
+
+<style>
+    .hero-banner {
+        min-height: 60vh;
+    }
+
+    .banner-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: url('/images/rubius-banner.jpeg');
+        background-size: cover;
+        background-position: center;
+        opacity: 0.4;
+        mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0) 100%);
+        -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,0) 100%);
+    }
+</style>
